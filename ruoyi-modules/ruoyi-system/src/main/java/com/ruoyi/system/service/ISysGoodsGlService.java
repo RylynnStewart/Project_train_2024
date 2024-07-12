@@ -7,7 +7,7 @@ import com.ruoyi.system.domain.SysGoodsGl;
  * 商品管理Service接口
  * 
  * @author xuaofeng
- * @date 2024-07-11
+ * @date 2024-07-12
  */
 public interface ISysGoodsGlService 
 {
