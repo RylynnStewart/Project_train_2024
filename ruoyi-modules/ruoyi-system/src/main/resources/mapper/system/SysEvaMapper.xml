@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruoyi.system.mapper.SysEvaMapper">
+    
+    <resultMap type="SysEva" id="SysEvaResult">
+        <result property="evaId"    column="eva_id"    />
+        <result property="evaUsername"    column="eva_username"    />
+        <result property="evaGoodsname"    column="eva_goodsname"    />
+        <result property="evaContents"    column="eva_contents"    />
+        <result property="evaUserimg"    column="eva_userimg"    />
+        <result property="evaCreate"    column="eva_create"    />
+    </resultMap>
+
+    <sql id="selectSysEvaVo">
+        select eva_id, eva_username, eva_goodsname, eva_contents, eva_userimg, eva_create from sys_eva
+    </sql>
+
+    <select id="selectSysEvaList" parameterType="SysEva" resultMap="SysEvaResult">
+        <include refid="selectSysEvaVo"/>
+        <where>  
+            <if test="evaUsername != null  and evaUsername != ''"> and eva_username like concat('%', #{evaUsername}, '%')</if>
+            <if test="evaGoodsname != null  and evaGoodsname != ''"> and eva_goodsname like concat('%', #{evaGoodsname}, '%')</if>
+            <if test="evaContents != null  and evaContents != ''"> and eva_contents = #{evaContents}</if>
+            <if test="evaUserimg != null  and evaUserimg != ''"> and eva_userimg = #{evaUserimg}</if>
+            <if test="evaCreate != null "> and eva_create = #{evaCreate}</if>
+        </where>
+    </select>
+    
+    <select id="selectSysEvaByEvaId" parameterType="Long" resultMap="SysEvaResult">
+        <include refid="selectSysEvaVo"/>
+        where eva_id = #{evaId}
+    </select>
+        
+    <insert id="insertSysEva" parameterType="SysEva" useGeneratedKeys="true" keyProperty="evaId">
+        insert into sys_eva
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="evaUsername != null">eva_username,</if>
+            <if test="evaGoodsname != null and evaGoodsname != ''">eva_goodsname,</if>
+            <if test="evaContents != null and evaContents != ''">eva_contents,</if>
+            <if test="evaUserimg != null">eva_userimg,</if>
+            <if test="evaCreate != null">eva_create,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="evaUsername != null">#{evaUsername},</if>
+            <if test="evaGoodsname != null and evaGoodsname != ''">#{evaGoodsname},</if>
+            <if test="evaContents != null and evaContents != ''">#{evaContents},</if>
+            <if test="evaUserimg != null">#{evaUserimg},</if>
+            <if test="evaCreate != null">#{evaCreate},</if>
+         </trim>
+    </insert>
+
+    <update id="updateSysEva" parameterType="SysEva">
+        update sys_eva
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="evaUsername != null">eva_username = #{evaUsername},</if>
+            <if test="evaGoodsname != null and evaGoodsname != ''">eva_goodsname = #{evaGoodsname},</if>
+            <if test="evaContents != null and evaContents != ''">eva_contents = #{evaContents},</if>
+            <if test="evaUserimg != null">eva_userimg = #{evaUserimg},</if>
+            <if test="evaCreate != null">eva_create = #{evaCreate},</if>
+        </trim>
+        where eva_id = #{evaId}
+    </update>
+
+    <delete id="deleteSysEvaByEvaId" parameterType="Long">
+        delete from sys_eva where eva_id = #{evaId}
+    </delete>
+
+    <delete id="deleteSysEvaByEvaIds" parameterType="String">
+        delete from sys_eva where eva_id in 
+        <foreach item="evaId" collection="array" open="(" separator="," close=")">
+            #{evaId}
+        </foreach>
+    </delete>
+</mapper>

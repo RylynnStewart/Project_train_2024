@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruoyi.system.mapper.SysCarMapper">
+    
+    <resultMap type="SysCar" id="SysCarResult">
+        <result property="id"    column="id"    />
+        <result property="carName"    column="car_name"    />
+        <result property="carQuantity"    column="car_quantity"    />
+        <result property="carPrices"    column="car_prices"    />
+        <result property="carUsername"    column="car_username"    />
+    </resultMap>
+
+    <sql id="selectSysCarVo">
+        select id, car_name, car_quantity, car_prices, car_username from sys_car
+    </sql>
+
+    <select id="selectSysCarList" parameterType="SysCar" resultMap="SysCarResult">
+        <include refid="selectSysCarVo"/>
+        <where>  
+            <if test="carName != null  and carName != ''"> and car_name like concat('%', #{carName}, '%')</if>
+            <if test="carQuantity != null  and carQuantity != ''"> and car_quantity = #{carQuantity}</if>
+            <if test="carPrices != null "> and car_prices = #{carPrices}</if>
+            <if test="carUsername != null  and carUsername != ''"> and car_username like concat('%', #{carUsername}, '%')</if>
+        </where>
+    </select>
+    
+    <select id="selectSysCarById" parameterType="Long" resultMap="SysCarResult">
+        <include refid="selectSysCarVo"/>
+        where id = #{id}
+    </select>
+        
+    <insert id="insertSysCar" parameterType="SysCar" useGeneratedKeys="true" keyProperty="id">
+        insert into sys_car
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="carName != null">car_name,</if>
+            <if test="carQuantity != null">car_quantity,</if>
+            <if test="carPrices != null">car_prices,</if>
+            <if test="carUsername != null">car_username,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="carName != null">#{carName},</if>
+            <if test="carQuantity != null">#{carQuantity},</if>
+            <if test="carPrices != null">#{carPrices},</if>
+            <if test="carUsername != null">#{carUsername},</if>
+         </trim>
+    </insert>
+
+    <update id="updateSysCar" parameterType="SysCar">
+        update sys_car
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="carName != null">car_name = #{carName},</if>
+            <if test="carQuantity != null">car_quantity = #{carQuantity},</if>
+            <if test="carPrices != null">car_prices = #{carPrices},</if>
+            <if test="carUsername != null">car_username = #{carUsername},</if>
+        </trim>
+        where id = #{id}
+    </update>
+
+    <delete id="deleteSysCarById" parameterType="Long">
+        delete from sys_car where id = #{id}
+    </delete>
+
+    <delete id="deleteSysCarByIds" parameterType="String">
+        delete from sys_car where id in 
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+</mapper>
