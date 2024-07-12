@@ -1,0 +1,33 @@
+# Tomcat
+server:
+  port: 9201
+
+# Spring
+spring: 
+  application:
+    # 应用名称
+    name: ruoyi-system
+  profiles:
+    # 环境配置
+    active: dev
+  cloud:
+    nacos:
+      discovery:
+        # 服务注册地址
+        server-addr: 127.0.0.1:8848
+      config:
+        # 配置中心地址
+        server-addr: 127.0.0.1:8848
+        # 配置文件格式
+        file-extension: yml
+        # 共享配置
+        shared-configs:
+          - application-${spring.profiles.active}.${spring.cloud.nacos.config.file-extension}
+
+alipay:
+  appId: 9021000133667994
+  appPrivateKey: MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCibaOFY21vLLbgdV+AplBIsIh52vHcOWORH+oNMtS8gmzy7uoTXRsxKfNGBILaD14FfS0V0sKLH0qTe0SUUTIJZzTkEhp+5huVUsCV+lhEipJ8jfq9iprCfnnsoOhgNJKuYjqJTW+/W1dNDlL5o4kwzNZjA07evurUciz6AiHxJBMMKJyTb6vukYJur2k9y/IAA2MhxNOVLEVdEobv3ZWkxCXiZBLzmIGVM5zN8XC6ds0VSXLoxH6viru9W/oYqCG8nVNmXqFtR4FY0vtpIla7wrHtF47FQiLYMt1qTdGEASLk1pJ1yn5Taudj3z5V7Rrwh43bxPhyCZK+05LcLXhlAgMBAAECggEANcd9Y9XWzv+MEWdrVoo6fMbOeSIwAE2UFOHvOa2B2GSKtCi8oeqq7S1Jmf42YQLDi6e1fMtKlIuowooG2+DCY3Cjh3wi/68qpNdAYqf//7mt5MWRpp40vX7o2ZsxNWFSy6BEZ1+XR1Fz51R9zqAB9YFs3l2jCIdH801WbPS1zkQtY97dTF8HvldgN3EC/e3U3og6TctJlCqgReq2tseI3KuGU1OeNlQdwDtDFl92+IaXCW+1NNTX+Cmh1I8k50up9yhvHIeh0HhbOWK9UOjezgob56ZKhlv6xdHE3Oa01G5+dTscYAGM1twy7W3CcFVpBdAUKWWQGfEUdco8mIOPwQKBgQDykFQhpB69FEtymufUxmjYwzvYye20ybUVFee1JlWFmOZvBkxTGOvJmrYpj2yk6DOV7WFSvDd3UVKHuzKvUb5V7HI0OjfF/T2DYHFbcUxqkLoTbk2DNMUbL+LIMI8cLFn3Hn3Pl6DU9X6U2H2hQvQpkcH6W1c1KaR4+j2l5FWCFQKBgQCrbPMzG2+bG4ykL72YCrI9jvky/ftAoyNrTsPjYjoqirAIiZp2Y9r6EMagxrGouRpjdMu+k5GJsrJDV+JexOCaQ7wZ+1v0daQWIpgfUUW7w0v8LyzuneWCbXKDOFufO1KeHD1ZClWiPHbUs7KwgQMYtpHU2A3aUWH4MWZvXzbBEQKBgE04pZAQL7kCPQK/Tg7vG3HmtabOol5r2LpdvuZszc06YCH4X1QVGvuTxWp1vqDBS6rvZ4xvXzkdKqkLb5dg7rdsDu+RmS/u7yZkDbKO30UNzi9hbkvXAOkm1Yvl6amOdRW3H1Z3bzxc6293fIdaSWDyhk6txZWnLDVXdUja6F4BAoGBAJXjSnZ6W8h8eymoUJdbauPmWkBa0NCAlFykXyU3YvKFl0uvvW4c+3/BIVu8v+RuDQO/QNLextdmdvXpJxaEAHsCFLuHC60hG5r7HpXrgxScu5jCSwBM8TtspT7VDU+aGDAFMyLipWOYiLKMeQZZl7KJF9PKIbqthAL2dsGUuBRxAoGBAKsjKP/4fcmBZUf6o8k1f4Q9Vi61xoLUVAurvRf4sQcfU6tOjEMX/rAkhDElaqb9Au5pHmbrcTsrXjJ0qZVKWc+wZh6KG06AsZZel4rhRI6hBenCttHOilaQGT92CUucHw6rre64i7NPKd5KkUCnKx1mor3KzaahV/SzR9F6nogQ
+  alipayPublicKey: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqHtN76LeouGSC/yzBrNWU9M/kHe9vQtIvd/wJwOXT+sbK2EqPHtrbOWIGeqhJd/5FOspRaEoPcNNMSpuFnnxEaaU5+7+okBXLQU5PdruWTzblkKqp9J5zi+pL3LuzYxP+4shYw8F3eJOnAeksaslCWJtDPfNqtncSW2gOwQhFCFnorabbUOl/vmcpuNADjMj65SMt1KYzQARgjsamJFwXNFsFhTDJln8R48kEZ5GYEaQqffd3kjaRmCYTWG+1BIKnTpNuuY4/9k2Y8HviEG4SHXo8E41Ba38DrKEL4QXbcEk0+xoiW8uGFl9l8ExC1pTsj87StObBAzc+XTCfWmnJwIDAQAB
+  notifyUrl: http://4b1dd981.r28.cpolar.top/alipay/notify
+  returnUrl: http://localhost:8000/sysorder
+

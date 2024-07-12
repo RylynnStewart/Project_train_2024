@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruoyi.system.mapper.SysGoodsGlMapper">
+    
+    <resultMap type="SysGoodsGl" id="SysGoodsGlResult">
+        <result property="goodsId"    column="Goods_id"    />
+        <result property="goodsName"    column="Goods_name"    />
+        <result property="goodsPrice"    column="Goods_price"    />
+        <result property="goodsStatus"    column="Goods_status"    />
+        <result property="goodsPj"    column="Goods_pj"    />
+        <result property="goodsLikes"    column="Goods_likes"    />
+        <result property="goodsImg"    column="Goods_img"    />
+    </resultMap>
+
+    <sql id="selectSysGoodsGlVo">
+        select Goods_id, Goods_name, Goods_price, Goods_status, Goods_pj, Goods_likes, Goods_img from sys_goods_gl
+    </sql>
+
+    <select id="selectSysGoodsGlList" parameterType="SysGoodsGl" resultMap="SysGoodsGlResult">
+        <include refid="selectSysGoodsGlVo"/>
+        <where>  
+            <if test="goodsName != null  and goodsName != ''"> and Goods_name like concat('%', #{goodsName}, '%')</if>
+            <if test="goodsPrice != null "> and Goods_price = #{goodsPrice}</if>
+            <if test="goodsStatus != null  and goodsStatus != ''"> and Goods_status = #{goodsStatus}</if>
+            <if test="goodsPj != null  and goodsPj != ''"> and Goods_pj = #{goodsPj}</if>
+            <if test="goodsLikes != null "> and Goods_likes = #{goodsLikes}</if>
+            <if test="goodsImg != null  and goodsImg != ''"> and Goods_img = #{goodsImg}</if>
+        </where>
+    </select>
+    
+    <select id="selectSysGoodsGlByGoodsId" parameterType="Long" resultMap="SysGoodsGlResult">
+        <include refid="selectSysGoodsGlVo"/>
+        where Goods_id = #{goodsId}
+    </select>
+        
+    <insert id="insertSysGoodsGl" parameterType="SysGoodsGl" useGeneratedKeys="true" keyProperty="goodsId">
+        insert into sys_goods_gl
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="goodsName != null">Goods_name,</if>
+            <if test="goodsPrice != null">Goods_price,</if>
+            <if test="goodsStatus != null">Goods_status,</if>
+            <if test="goodsPj != null">Goods_pj,</if>
+            <if test="goodsLikes != null">Goods_likes,</if>
+            <if test="goodsImg != null">Goods_img,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="goodsName != null">#{goodsName},</if>
+            <if test="goodsPrice != null">#{goodsPrice},</if>
+            <if test="goodsStatus != null">#{goodsStatus},</if>
+            <if test="goodsPj != null">#{goodsPj},</if>
+            <if test="goodsLikes != null">#{goodsLikes},</if>
+            <if test="goodsImg != null">#{goodsImg},</if>
+         </trim>
+    </insert>
+
+    <update id="updateSysGoodsGl" parameterType="SysGoodsGl">
+        update sys_goods_gl
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="goodsName != null">Goods_name = #{goodsName},</if>
+            <if test="goodsPrice != null">Goods_price = #{goodsPrice},</if>
+            <if test="goodsStatus != null">Goods_status = #{goodsStatus},</if>
+            <if test="goodsPj != null">Goods_pj = #{goodsPj},</if>
+            <if test="goodsLikes != null">Goods_likes = #{goodsLikes},</if>
+            <if test="goodsImg != null">Goods_img = #{goodsImg},</if>
+        </trim>
+        where Goods_id = #{goodsId}
+    </update>
+
+    <delete id="deleteSysGoodsGlByGoodsId" parameterType="Long">
+        delete from sys_goods_gl where Goods_id = #{goodsId}
+    </delete>
+
+    <delete id="deleteSysGoodsGlByGoodsIds" parameterType="String">
+        delete from sys_goods_gl where Goods_id in 
+        <foreach item="goodsId" collection="array" open="(" separator="," close=")">
+            #{goodsId}
+        </foreach>
+    </delete>
+
+
+<!--    增加商品-->
+    <update id="upSysGoodsGl" parameterType="SysGoodsGl">
+        update sys_goods_gl
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="goodsLikes != null">Goods_likes = #{goodsLikes},</if>
+        </trim>
+        where Goods_id = #{goodsId}
+    </update>
+
+</mapper>
