@@ -6,8 +6,8 @@ import com.ruoyi.system.domain.SysGoodsGl;
 /**
  * 商品管理Service接口
  * 
- * @author liuhao
- * @date 2024-02-26
+ * @author xuaofeng
+ * @date 2024-07-11
  */
 public interface ISysGoodsGlService 
 {
