@@ -6,8 +6,8 @@ import com.ruoyi.system.domain.SysGoodsGl;
 /**
  * 商品管理Mapper接口
  * 
- * @author liuhao
- * @date 2024-02-26
+ * @author xuaofeng
+ * @date 2024-07-12
  */
 public interface SysGoodsGlMapper 
 {
