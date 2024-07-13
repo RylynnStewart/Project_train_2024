@@ -20,7 +20,7 @@ import com.ruoyi.system.api.model.LoginUser;
 /**
  * token 控制
  * 
- * @author ruoyi
+ * @author HuChangtao
  */
 @RestController
 public class TokenController
