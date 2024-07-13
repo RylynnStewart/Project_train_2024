@@ -6,7 +6,7 @@
     <top-nav id="topmenu-container" class="topmenu-container" v-if="topNav"/>
 
     <div class="right-menu">
-       崴餐订购平台 时间：{{ currentDate  }}
+       惠誉订购平台 时间：{{ currentDate  }}
       <el-dropdown class="avatar-container right-menu-item hover-effect" trigger="click">
         <div class="avatar-wrapper">
           <img :src="avatar" class="user-avatar">
