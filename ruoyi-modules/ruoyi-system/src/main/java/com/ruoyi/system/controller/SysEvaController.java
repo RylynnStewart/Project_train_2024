@@ -24,9 +24,9 @@ import com.ruoyi.common.core.web.page.TableDataInfo;
 
 /**
  * 菜品评价Controller
- * 
- * @author liuhao
- * @date 2024-03-01
+ *
+ * @author ryan
+ * @date 2024-07-12
  */
 @RestController
 @RequestMapping("/eva")

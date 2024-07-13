@@ -5,15 +5,15 @@ import com.ruoyi.system.domain.SysEva;
 
 /**
  * 菜品评价Mapper接口
- * 
- * @author liuhao
- * @date 2024-03-01
+ *
+ * @author ryan
+ * @date 2024-07-12
  */
-public interface SysEvaMapper 
+public interface SysEvaMapper
 {
     /**
      * 查询菜品评价
-     * 
+     *
      * @param evaId 菜品评价主键
      * @return 菜品评价
      */
@@ -21,7 +21,7 @@ public interface SysEvaMapper
 
     /**
      * 查询菜品评价列表
-     * 
+     *
      * @param sysEva 菜品评价
      * @return 菜品评价集合
      */
@@ -29,7 +29,7 @@ public interface SysEvaMapper
 
     /**
      * 新增菜品评价
-     * 
+     *
      * @param sysEva 菜品评价
      * @return 结果
      */
@@ -37,7 +37,7 @@ public interface SysEvaMapper
 
     /**
      * 修改菜品评价
-     * 
+     *
      * @param sysEva 菜品评价
      * @return 结果
      */
@@ -45,7 +45,7 @@ public interface SysEvaMapper
 
     /**
      * 删除菜品评价
-     * 
+     *
      * @param evaId 菜品评价主键
      * @return 结果
      */
@@ -53,7 +53,7 @@ public interface SysEvaMapper
 
     /**
      * 批量删除菜品评价
-     * 
+     *
      * @param evaIds 需要删除的数据主键集合
      * @return 结果
      */

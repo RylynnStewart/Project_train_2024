@@ -8,9 +8,8 @@ import com.ruoyi.common.core.web.domain.BaseEntity;
 /**
  * 商品管理对象 sys_goods_gl
  *
- *
- * @author xuaofeng
- * @date 2024-07-11
+ * @author ryan
+ * @date 2024-07-12
  */
 public class SysGoodsGl extends BaseEntity
 {
@@ -43,66 +42,66 @@ public class SysGoodsGl extends BaseEntity
     @Excel(name = "商品图片")
     private String goodsImg;
 
-    public void setGoodsId(Long goodsId) 
+    public void setGoodsId(Long goodsId)
     {
         this.goodsId = goodsId;
     }
 
-    public Long getGoodsId() 
+    public Long getGoodsId()
     {
         return goodsId;
     }
-    public void setGoodsName(String goodsName) 
+    public void setGoodsName(String goodsName)
     {
         this.goodsName = goodsName;
     }
 
-    public String getGoodsName() 
+    public String getGoodsName()
     {
         return goodsName;
     }
-    public void setGoodsPrice(Double goodsPrice) 
+    public void setGoodsPrice(Double goodsPrice)
     {
         this.goodsPrice = goodsPrice;
     }
 
-    public Double getGoodsPrice() 
+    public Double getGoodsPrice()
     {
         return goodsPrice;
     }
-    public void setGoodsStatus(String goodsStatus) 
+    public void setGoodsStatus(String goodsStatus)
     {
         this.goodsStatus = goodsStatus;
     }
 
-    public String getGoodsStatus() 
+    public String getGoodsStatus()
     {
         return goodsStatus;
     }
-    public void setGoodsPj(String goodsPj) 
+    public void setGoodsPj(String goodsPj)
     {
         this.goodsPj = goodsPj;
     }
 
-    public String getGoodsPj() 
+    public String getGoodsPj()
     {
         return goodsPj;
     }
-    public void setGoodsLikes(Long goodsLikes) 
+    public void setGoodsLikes(Long goodsLikes)
     {
         this.goodsLikes = goodsLikes;
     }
 
-    public Long getGoodsLikes() 
+    public Long getGoodsLikes()
     {
         return goodsLikes;
     }
-    public void setGoodsImg(String goodsImg) 
+    public void setGoodsImg(String goodsImg)
     {
         this.goodsImg = goodsImg;
     }
 
-    public String getGoodsImg() 
+    public String getGoodsImg()
     {
         return goodsImg;
     }

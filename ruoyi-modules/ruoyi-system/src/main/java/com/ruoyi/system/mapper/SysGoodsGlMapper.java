@@ -6,15 +6,14 @@ import com.ruoyi.system.domain.SysGoodsGl;
 /**
  * 商品管理Mapper接口
  *
- *
- * @author xuaofeng
+ * @author ryan
  * @date 2024-07-12
  */
-public interface SysGoodsGlMapper 
+public interface SysGoodsGlMapper
 {
     /**
      * 查询商品管理
-     * 
+     *
      * @param goodsId 商品管理主键
      * @return 商品管理
      */
@@ -22,7 +21,7 @@ public interface SysGoodsGlMapper
 
     /**
      * 查询商品管理列表
-     * 
+     *
      * @param sysGoodsGl 商品管理
      * @return 商品管理集合
      */
@@ -30,7 +29,7 @@ public interface SysGoodsGlMapper
 
     /**
      * 新增商品管理
-     * 
+     *
      * @param sysGoodsGl 商品管理
      * @return 结果
      */
@@ -38,7 +37,7 @@ public interface SysGoodsGlMapper
 
     /**
      * 修改商品管理
-     * 
+     *
      * @param sysGoodsGl 商品管理
      * @return 结果
      */
@@ -46,7 +45,7 @@ public interface SysGoodsGlMapper
 
     /**
      * 删除商品管理
-     * 
+     *
      * @param goodsId 商品管理主键
      * @return 结果
      */
@@ -54,7 +53,7 @@ public interface SysGoodsGlMapper
 
     /**
      * 批量删除商品管理
-     * 
+     *
      * @param goodsIds 需要删除的数据主键集合
      * @return 结果
      */

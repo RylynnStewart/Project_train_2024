@@ -25,8 +25,7 @@ import com.ruoyi.common.core.web.page.TableDataInfo;
 /**
  * 商品管理Controller
  *
- *
- * @author xuaofeng
+ * @author ryan
  * @date 2024-07-12
  */
 @RestController

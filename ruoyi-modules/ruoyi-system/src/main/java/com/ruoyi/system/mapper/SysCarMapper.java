@@ -5,15 +5,15 @@ import com.ruoyi.system.domain.SysCar;
 
 /**
  * 购物车Mapper接口
- * 
- * @author liuhao
- * @date 2024-02-28
+ *
+ * @author ryan
+ * @date 2024-07-12
  */
-public interface SysCarMapper 
+public interface SysCarMapper
 {
     /**
      * 查询购物车
-     * 
+     *
      * @param id 购物车主键
      * @return 购物车
      */
@@ -21,7 +21,7 @@ public interface SysCarMapper
 
     /**
      * 查询购物车列表
-     * 
+     *
      * @param sysCar 购物车
      * @return 购物车集合
      */
@@ -29,7 +29,7 @@ public interface SysCarMapper
 
     /**
      * 新增购物车
-     * 
+     *
      * @param sysCar 购物车
      * @return 结果
      */
@@ -37,7 +37,7 @@ public interface SysCarMapper
 
     /**
      * 修改购物车
-     * 
+     *
      * @param sysCar 购物车
      * @return 结果
      */
@@ -45,7 +45,7 @@ public interface SysCarMapper
 
     /**
      * 删除购物车
-     * 
+     *
      * @param id 购物车主键
      * @return 结果
      */
@@ -53,7 +53,7 @@ public interface SysCarMapper
 
     /**
      * 批量删除购物车
-     * 
+     *
      * @param ids 需要删除的数据主键集合
      * @return 结果
      */

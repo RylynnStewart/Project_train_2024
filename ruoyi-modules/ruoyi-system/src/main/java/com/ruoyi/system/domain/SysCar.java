@@ -8,9 +8,9 @@ import com.ruoyi.common.core.web.domain.BaseEntity;
 
 /**
  * 购物车对象 sys_car
- * 
- * @author liuhao
- * @date 2024-02-28
+ *
+ * @author ryan
+ * @date 2024-07-12
  */
 public class SysCar extends BaseEntity
 {
@@ -35,48 +35,48 @@ public class SysCar extends BaseEntity
     @Excel(name = "购物车主姓名")
     private String carUsername;
 
-    public void setId(Long id) 
+    public void setId(Long id)
     {
         this.id = id;
     }
 
-    public Long getId() 
+    public Long getId()
     {
         return id;
     }
-    public void setCarName(String carName) 
+    public void setCarName(String carName)
     {
         this.carName = carName;
     }
 
-    public String getCarName() 
+    public String getCarName()
     {
         return carName;
     }
-    public void setCarQuantity(String carQuantity) 
+    public void setCarQuantity(String carQuantity)
     {
         this.carQuantity = carQuantity;
     }
 
-    public String getCarQuantity() 
+    public String getCarQuantity()
     {
         return carQuantity;
     }
-    public void setCarPrices(BigDecimal carPrices) 
+    public void setCarPrices(BigDecimal carPrices)
     {
         this.carPrices = carPrices;
     }
 
-    public BigDecimal getCarPrices() 
+    public BigDecimal getCarPrices()
     {
         return carPrices;
     }
-    public void setCarUsername(String carUsername) 
+    public void setCarUsername(String carUsername)
     {
         this.carUsername = carUsername;
     }
 
-    public String getCarUsername() 
+    public String getCarUsername()
     {
         return carUsername;
     }

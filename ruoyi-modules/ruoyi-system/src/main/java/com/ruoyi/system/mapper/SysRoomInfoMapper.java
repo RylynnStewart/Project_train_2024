@@ -7,15 +7,15 @@ import com.ruoyi.system.domain.SysRoomInfo;
 
 /**
  * 房间Mapper接口
- * 
- * @author liuhao
- * @date 2024-02-29
+ *
+ * @author ryan
+ * @date 2024-07-12
  */
-public interface SysRoomInfoMapper 
+public interface SysRoomInfoMapper
 {
     /**
      * 查询房间
-     * 
+     *
      * @param roomId 房间主键
      * @return 房间
      */
@@ -23,7 +23,7 @@ public interface SysRoomInfoMapper
 
     /**
      * 查询房间列表
-     * 
+     *
      * @param sysRoomInfo 房间
      * @return 房间集合
      */
@@ -31,7 +31,7 @@ public interface SysRoomInfoMapper
 
     /**
      * 新增房间
-     * 
+     *
      * @param sysRoomInfo 房间
      * @return 结果
      */
@@ -39,7 +39,7 @@ public interface SysRoomInfoMapper
 
     /**
      * 修改房间
-     * 
+     *
      * @param sysRoomInfo 房间
      * @return 结果
      */
@@ -47,7 +47,7 @@ public interface SysRoomInfoMapper
 
     /**
      * 删除房间
-     * 
+     *
      * @param roomId 房间主键
      * @return 结果
      */
@@ -55,7 +55,7 @@ public interface SysRoomInfoMapper
 
     /**
      * 批量删除房间
-     * 
+     *
      * @param roomIds 需要删除的数据主键集合
      * @return 结果
      */

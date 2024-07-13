@@ -24,9 +24,9 @@ import com.ruoyi.common.core.web.page.TableDataInfo;
 
 /**
  * 购物车Controller
- * 
- * @author liuhao
- * @date 2024-02-28
+ *
+ * @author ryan
+ * @date 2024-07-12
  */
 @RestController
 @RequestMapping("/car")
