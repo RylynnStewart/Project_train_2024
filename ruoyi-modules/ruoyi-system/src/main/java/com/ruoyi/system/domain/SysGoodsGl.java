@@ -8,7 +8,7 @@ import com.ruoyi.common.core.web.domain.BaseEntity;
 /**
  * 商品管理对象 sys_goods_gl
  *
- * @author ryan
+ * @author xuaofeng
  * @date 2024-07-12
  */
 public class SysGoodsGl extends BaseEntity
