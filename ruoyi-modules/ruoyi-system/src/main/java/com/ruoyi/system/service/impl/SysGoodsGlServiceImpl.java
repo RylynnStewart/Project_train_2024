@@ -10,8 +10,8 @@ import com.ruoyi.system.service.ISysGoodsGlService;
 /**
  * 商品管理Service业务层处理
  * 
- * @author liuhao
- * @date 2024-02-26
+ * @author xuaofeng
+ * @date 2024-07-12
  */
 @Service
 public class SysGoodsGlServiceImpl implements ISysGoodsGlService 
