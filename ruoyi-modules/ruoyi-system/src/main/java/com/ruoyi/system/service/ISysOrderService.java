@@ -1,18 +1,19 @@
-package com.ruoyi.system.mapper;
+package com.ruoyi.system.service;
+
 import java.util.List;
 import com.ruoyi.system.domain.SysOrder;
 
 /**
- * 交易订单Mapper接口
+ * 交易订单Service接口
  * 
- * @author HuChangtao
- * @date 2024-07-12
+ * @author liuhao
+ * @date 2024-02-29
  */
-public interface SysOrderMapper
+public interface ISysOrderService 
 {
     /**
      * 查询交易订单
-     *
+     * 
      * @param id 交易订单主键
      * @return 交易订单
      */
@@ -43,7 +44,15 @@ public interface SysOrderMapper
     public int updateSysOrder(SysOrder sysOrder);
 
     /**
-     * 删除交易订单
+     * 批量删除交易订单
+     * 
+     * @param ids 需要删除的交易订单主键集合
+     * @return 结果
+     */
+    public int deleteSysOrderByIds(Long[] ids);
+
+    /**
+     * 删除交易订单信息
      * 
      * @param id 交易订单主键
      * @return 结果
@@ -51,15 +60,10 @@ public interface SysOrderMapper
     public int deleteSysOrderById(Long id);
 
     /**
-     * 批量删除交易订单
-     * 
-     * @param ids 需要删除的数据主键集合
-     * @return 结果
-     */
-    public int deleteSysOrderByIds(Long[] ids);
-
-    /**
-     * 查询交易订单的日期与交易额
+     * 查询最后十条交易数据
+     *
+     * @param
+     * @return
      */
     public List<SysOrder> selectEc(SysOrder sysOrder);
 }
