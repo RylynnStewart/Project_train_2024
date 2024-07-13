@@ -10,8 +10,8 @@ import com.ruoyi.common.core.web.domain.BaseEntity;
 
 /**
  * 交易订单对象 sys_order
- *
- * @author ryan
+ * 
+ * @author HuChangtao
  * @date 2024-07-12
  */
 public class SysOrder extends BaseEntity
@@ -63,102 +63,102 @@ public class SysOrder extends BaseEntity
     @Excel(name = "配送日期", width = 30, dateFormat = "yyyy-MM-dd")
     private Date getDate;
 
-    public void setId(Long id)
+    public void setId(Long id) 
     {
         this.id = id;
     }
 
-    public Long getId()
+    public Long getId() 
     {
         return id;
     }
-    public void setUserName(String userName)
+    public void setUserName(String userName) 
     {
         this.userName = userName;
     }
 
-    public String getUserName()
+    public String getUserName() 
     {
         return userName;
     }
-    public void setName(String name)
+    public void setName(String name) 
     {
         this.name = name;
     }
 
-    public String getName()
+    public String getName() 
     {
         return name;
     }
-    public void setOrderId(String orderId)
+    public void setOrderId(String orderId) 
     {
         this.orderId = orderId;
     }
 
-    public String getOrderId()
+    public String getOrderId() 
     {
         return orderId;
     }
-    public void setAlipayNo(String alipayNo)
+    public void setAlipayNo(String alipayNo) 
     {
         this.alipayNo = alipayNo;
     }
 
-    public String getAlipayNo()
+    public String getAlipayNo() 
     {
         return alipayNo;
     }
-    public void setPayTime(Date payTime)
+    public void setPayTime(Date payTime) 
     {
         this.payTime = payTime;
     }
 
-    public Date getPayTime()
+    public Date getPayTime() 
     {
         return payTime;
     }
-    public void setGoodsId(Long goodsId)
+    public void setGoodsId(Long goodsId) 
     {
         this.goodsId = goodsId;
     }
 
-    public Long getGoodsId()
+    public Long getGoodsId() 
     {
         return goodsId;
     }
-    public void setTotal(BigDecimal total)
+    public void setTotal(BigDecimal total) 
     {
         this.total = total;
     }
 
-    public BigDecimal getTotal()
+    public BigDecimal getTotal() 
     {
         return total;
     }
-    public void setState(String state)
+    public void setState(String state) 
     {
         this.state = state;
     }
 
-    public String getState()
+    public String getState() 
     {
         return state;
     }
-    public void setLocation(String location)
+    public void setLocation(String location) 
     {
         this.location = location;
     }
 
-    public String getLocation()
+    public String getLocation() 
     {
         return location;
     }
-    public void setGetDate(Date getDate)
+    public void setGetDate(Date getDate) 
     {
         this.getDate = getDate;
     }
 
-    public Date getGetDate()
+    public Date getGetDate() 
     {
         return getDate;
     }
