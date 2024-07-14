@@ -9,7 +9,7 @@ import com.ruoyi.common.core.web.domain.BaseEntity;
 /**
  * 购物车对象 sys_car
  *
- * @author ryan
+ * @author lengyunzhe
  * @date 2024-07-12
  */
 public class SysCar extends BaseEntity

@@ -6,7 +6,7 @@ import com.ruoyi.system.domain.SysCar;
 /**
  * 购物车Mapper接口
  *
- * @author ryan
+ * @author lengyunzhe
  * @date 2024-07-12
  */
 public interface SysCarMapper

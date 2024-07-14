@@ -6,8 +6,8 @@ import com.ruoyi.system.domain.SysCar;
 /**
  * 购物车Service接口
  * 
- * @author liuhao
- * @date 2024-02-28
+ * @author lengyunzhe
+ * @date 2024-07-12
  */
 public interface ISysCarService 
 {
